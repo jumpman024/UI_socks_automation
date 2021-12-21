@@ -6,7 +6,7 @@ stage('checkout repo') {
 
         }
         stage('run ui tests') {
-           sh "./gradlew ui-tests:test -Dlogging=${LOGGING}"
+           sh "./gradlew ui:test -Dlogging=${LOGGING}"
         }
 
         allure([
