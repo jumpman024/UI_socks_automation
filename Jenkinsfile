@@ -14,6 +14,6 @@ stage('checkout repo') {
         jdk: '',
         properties: [],
         reportBuildPolicy: 'ALWAYS',
-        results: [[path: 'ui-test/build/allure-results']
+        results: [path: 'ui-test/build/allure-results']
        ])
 }
