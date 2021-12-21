@@ -29,8 +29,8 @@ public class ShoppingCartTest extends BaseUITest {
 
     }
 
-    @AfterMethod
-    public void tearDown() {
-        Selenide.clearBrowserCookies();
-    }
+//    @AfterMethod
+//    public void tearDown() {
+//        Selenide.clearBrowserCookies();
+//    }
 }

@@ -12,7 +12,8 @@ public class TestLogin extends BaseUITest {
 
 
     @Test
-    public void userCanLoginWithValidCredentials() {
+    public void userCanLoginWithValidCredentials() throws InterruptedException {
+
         MainPage.open()
         .loginAs("testuser","123456");
 

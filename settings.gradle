@@ -1,0 +1,3 @@
+rootProject.name = 'ui__socks_automation'
+include 'ui'
+

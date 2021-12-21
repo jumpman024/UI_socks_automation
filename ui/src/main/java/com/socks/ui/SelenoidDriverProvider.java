@@ -11,13 +11,13 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import javax.annotation.Nonnull;
 import java.net.MalformedURLException;
 import java.net.URI;
+import java.util.Map;
 
 public class SelenoidDriverProvider implements WebDriverProvider {
 
 
-    @Nonnull
     @Override
-    public WebDriver createDriver(@Nonnull Capabilities desiredCapabilities) {
+    public WebDriver createDriver(Capabilities desiredCapabilities) {
         DesiredCapabilities browser = new DesiredCapabilities();
         browser.setBrowserName("chrome");
         browser.setVersion("96.0");
@@ -25,15 +25,30 @@ public class SelenoidDriverProvider implements WebDriverProvider {
 
         try {
             RemoteWebDriver driver = new RemoteWebDriver(
-                    URI.create("http://localhost:4444/wd/hub/").toURL(),
+                    URI.create("http://localhost:8081/wd/hub").toURL(),
                     browser
+
             );
-            driver.manage().window().setSize(new Dimension(1280,1024));
-            driver.setFileDetector(new LocalFileDetector());
+            driver.manage().window().setSize(new Dimension(1280, 1024));
+//            driver.setFileDetector(new LocalFileDetector());
             return driver;
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }
 
+//        DesiredCapabilities capabilities = new DesiredCapabilities();
+//        capabilities.setCapability("browserName", "chrome");
+//        capabilities.setCapability("browserVersion", "96.0");
+//        capabilities.setCapability("enableVNC", true);
+//        try {
+//            RemoteWebDriver driver = new RemoteWebDriver(
+//                    URI.create("http://selenoid:4444/wd/hub").toURL(),
+//                    capabilities
+//            );
+//        } catch (MalformedURLException e) {
+//            e.printStackTrace();
+//        }
+//
+//    }
     }
 }

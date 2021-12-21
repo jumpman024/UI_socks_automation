@@ -7,8 +7,9 @@ import static com.codeborne.selenide.Selenide.$;
 public class MainPage {
 
 
-    public static MainPage open() {
+    public static MainPage open() throws InterruptedException {
         Selenide.open("/");
+        Thread.sleep(100000);
         return new MainPage();
     }
 
