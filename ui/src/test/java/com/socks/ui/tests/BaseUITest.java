@@ -9,6 +9,7 @@ public class BaseUITest {
     @BeforeSuite
     public void setUp(){
         Configuration.baseUrl = "http://localhost";
+        Configuration.browser = "com.socks.ui.SelenoidDriverProvider";
     }
 
     protected <T> T at(Class<T> pageClass){
