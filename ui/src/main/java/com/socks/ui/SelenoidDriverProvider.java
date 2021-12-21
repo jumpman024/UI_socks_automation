@@ -23,7 +23,6 @@ public class SelenoidDriverProvider implements WebDriverProvider {
         browser.setVersion("96.0");
         browser.setCapability("enableVNC", true);
 
-
         try {
             RemoteWebDriver driver = new RemoteWebDriver(
                     URI.create("http://localhost:4444/wd/hub/").toURL(),

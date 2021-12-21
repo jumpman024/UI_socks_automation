@@ -10,6 +10,7 @@ public class BaseUITest {
     public void setUp(){
         Configuration.baseUrl = "http://localhost";
         Configuration.browser = "com.socks.ui.SelenoidDriverProvider";
+//        Configuration.browser = "chrome";
     }
 
     protected <T> T at(Class<T> pageClass){
