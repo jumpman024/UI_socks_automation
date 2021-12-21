@@ -1,6 +1,6 @@
 node {
-stage('checkout repo') {
-            git branch: 'master',
+       stage('checkout repo') {
+            git branch: 'origin/master',
             credentialsId: 'ccc32da8-6b39-485a-abec-9503b81f9b68'
             url: 'https://github.com/jumpman024/UI_socks_automation.git'
 
